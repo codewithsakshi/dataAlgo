@@ -15,7 +15,7 @@ class LinkedList {
     const node = new Node(value);
     let current;
 
-    if (!this.head) {
+    if (this.head === null) {
       this.head = node;
       this.size++;
       return this.head;
@@ -29,7 +29,7 @@ class LinkedList {
 
   insertLast(value) {
     const node = new Node(value);
-    if (!this.head) {
+    if (this.head === null) {
       this.head = node;
       this.size++;
       return;
@@ -81,7 +81,7 @@ class LinkedList {
   }
 
   removeFirst(){
-    if(!this.head) return
+    if(this.head === null) return
     else if(!this.head.next){
         this.head = null;
         this.size--
@@ -94,7 +94,7 @@ class LinkedList {
   }
   
   removeLast(){
-    if(!this.head) return null;
+    if(this.head === null) return null;
     else if(!this.head.next) {
         this.head = null;
         this.size--
@@ -154,7 +154,7 @@ class LinkedList {
 }
 
 const list = new LinkedList();
-console.log(list.insertFirst(1));
+console.log(list.insertFirst(0));
 console.log(list.insertFirst(2));
 console.log(list.insertFirst(3));
 console.log(list.insertLast(4));
